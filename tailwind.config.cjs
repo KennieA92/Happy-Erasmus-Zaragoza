@@ -9,8 +9,8 @@ module.exports = {
           '50%': { transform: 'rotate(15deg) translateY(0)' },
         },
         opacity: {
-          '0%, 100%': { opacity: 0.75, transform: 'rotate(-15deg) translateY(0)' },
-          '50%': { opacity: 1, transform: 'rotate(15deg) translateY(5rem)' },
+          '0%, 100%': { opacity: 0.75, transform: 'rotate(-15deg)' },
+          '50%': { opacity: 1, transform: 'rotate(15deg)' },
         },
         translate: {
           '0%, 100%': { transform: 'translateY(50%)' },
@@ -26,7 +26,6 @@ module.exports = {
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/line-clamp")
+    require("@tailwindcss/aspect-ratio")
   ],
 };
