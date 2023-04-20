@@ -14,12 +14,12 @@
                     <p>Zaragoza</p>
                 </div>
                 <div class="w-full xl:w-9/12" v-else>
-                    <loginComponent @register="isRegister = true" v-if="!isRegister" class="animate-slide-in" />
-                    <registerComponent @register="isRegister = false" v-else class="animate-slide-in" />
+                    <LoginComponent @register="isRegister = true" v-if="!isRegister" class="animate-slide-in" />
+                    <RegisterComponent @register="isRegister = false" v-else class="animate-slide-in" />
                 </div>
             </div>
-            <div class="w-full md:w-1/2 h-screen flex justify-center">
-
+            <div class="w-full md:w-1/2 h-screen flex justify-center items-center">
+                <CarouselComponent />
             </div>
         </div>
     </div>
@@ -27,9 +27,10 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import loginComponent from '../components/LoginComponent.vue';
-import registerComponent from '../components/RegisterComponent.vue';
+import LoginComponent from '../components/LoginComponent.vue';
+import RegisterComponent from '../components/RegisterComponent.vue';
 import useUsers from '../modules/useUsers';
+import CarouselComponent from '../components/CarouselComponent.vue';
 const { isLoggedIn, logout, isUserLoggedIn } = useUsers();
 const isLoading = ref(true);
 onMounted(() => {
@@ -39,6 +40,8 @@ onMounted(() => {
 
         }, 3000);
     });
+
+
 
 });
 

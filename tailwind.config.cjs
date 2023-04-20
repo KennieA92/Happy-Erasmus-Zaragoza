@@ -14,6 +14,7 @@ module.exports = {
         }
       },
       animation: {
+        'single-pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) 1',
         'spin-slow': 'spin 6s linear infinite',
         'slide-in': 'slideIn 2s ease-in-out 1',
       },
