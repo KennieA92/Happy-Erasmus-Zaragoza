@@ -1,7 +1,7 @@
 
 <template>
   <Suspense>
-    <router-view class="lg:w-10/12" />
+    <router-view class="w-screen" />
   </Suspense>
 </template>
 

@@ -4,13 +4,9 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-15deg) translateY(5rem)' },
-          '50%': { transform: 'rotate(15deg) translateY(0)' },
-        },
-        opacity: {
-          '0%, 100%': { opacity: 0.75, transform: 'rotate(-15deg)' },
-          '50%': { opacity: 1, transform: 'rotate(15deg)' },
+        slideIn: {
+          '0%': { transform: 'translateX(-1000px)' },
+          '100%': { transform: 'translateX(0)' },
         },
         translate: {
           '0%, 100%': { transform: 'translateY(50%)' },
@@ -18,8 +14,15 @@ module.exports = {
         }
       },
       animation: {
-        'spin-slow': 'opacity 10s infinite, spin 10s linear infinite',
-        wiggle: 'opacity 3s infinite, wiggle 3s ease-in-out infinite',
+        'spin-slow': 'spin 6s linear infinite',
+        'slide-in': 'slideIn 2s ease-in-out 1',
+      },
+      colors: {
+        'primary': '#91B187',
+        'secondary': '#EDDCA8',
+      },
+      backgroundImage: {
+        'background': "url('/src/assets/background.svg')",
       }
     },
   },
