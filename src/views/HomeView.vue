@@ -18,7 +18,7 @@
                     <RegisterComponent @register="isRegister = false" v-else class="animate-slide-in" />
                 </div>
             </div>
-            <div class="w-full md:w-1/2 h-screen flex justify-center items-center">
+            <div class="w-full md:w-1/2 h-screen hidden md:flex justify-center items-center">
                 <CarouselComponent />
             </div>
         </div>

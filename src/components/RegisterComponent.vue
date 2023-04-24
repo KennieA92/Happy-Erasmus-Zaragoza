@@ -15,7 +15,8 @@
                 type="password" placeholder="PASSWORD" v-model="password" />
             <input type="submit" value="LOG IN"
                 class="w-40 py-1 bg-primary rounded-xl font-semibold text-xl text-black border-black border-[1px] border-solid" />
-            <p class="text-lg">Already have an account? <span class="text-secondary" @click="$emit('register')">Login
+            <p class="text-lg">Already have an account? <span class="text-secondary cursor-pointer"
+                    @click="$emit('register')">Login
                     here!</span>
             </p>
         </form>

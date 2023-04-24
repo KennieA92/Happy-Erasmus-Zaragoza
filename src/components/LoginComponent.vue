@@ -8,8 +8,9 @@
                 type="password" placeholder="Password" v-model="password" />
             <input type="submit" value="LOG IN"
                 class="w-40 py-1 bg-primary rounded-xl font-semibold text-xl text-black border-black border-[1px] border-solid" />
-            <p class="text-lg">Don't have an account? <span class="text-secondary" @click="$emit('register')">Register
-                    here!</span>
+            <p class="text-lg">Don't have an account? <a class="text-secondary cursor-pointer"
+                    @click="$emit('register')">Register
+                    here!</a>
             </p>
         </form>
     </div>
