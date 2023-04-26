@@ -44,15 +44,22 @@ module.exports = {
         'slide-in': 'slideIn 2s ease-in-out 1',
       },
       colors: {
-        'primary': '#91B187',
-        'secondary': '#EDDCA8',
+        'primary': '#D68C45',
+        'secondary': '#4C956C',
+        'tertiary': '#FBFCFC',
+        'quaternary': '#FEFEE3',
+        'text-secondary': '#2C6E49',
+        'accent': '#233D4D',
       },
       backgroundImage: {
         'background': "url('/src/assets/background.svg')",
         'albarracin': "url('/src/assets/albarracin.svg')",
         'bardenas': "url('/src/assets/bardenas.svg')",
         'pais_vasco': "url('/src/assets/pais_vasco.svg')",
-      }
+      },
+      fontFamily: {
+        'sourcecodepro': ['Source Code Pro', 'monospace'],
+      },
     },
   },
   plugins: [
