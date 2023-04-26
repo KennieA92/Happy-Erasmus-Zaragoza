@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full flex justify-center items-center h-40 ">
-        <nav class="w-10/12 flex justify-between items-center">
-            <router-link to="/">Happy Erasmus Zaragoza</router-link>
+    <div class="w-full flex justify-center items-center h-40 bg-quaternary">
+        <nav class="w-10/12 flex justify-between items-center font-sourcecodepro">
+            <router-link class="font-bold" to="/">HAPPY ERASMUS ZARAGOZA</router-link>
             <div class="flex justify-between w-8/12 items-center text-center">
                 <router-link class="w-2/12" to="/about">About</router-link>
                 <router-link class="w-2/12" to="/about">Trips</router-link>

@@ -1,5 +1,5 @@
 import { auth } from '../firebase.js'
-import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
+import { onAuthStateChanged, signInWithEmailAndPassword, FacebookAuthProvider, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, updateProfile } from 'firebase/auth';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -10,6 +10,63 @@ const useUsers = () => {
     const password = ref('');
     const user = ref();
     const router = useRouter();
+
+
+    const signInWithGoogle = async () => {
+        const provider = new GoogleAuthProvider();
+        provider.setCustomParameters({
+            prompt: "select_account"
+        });
+        await signInWithPopup(auth, provider)
+            .then((result) => {
+
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                if (credential == null) return;
+                const token = credential.accessToken;
+                // The signed-in user info.
+                user.value = result.user;
+                // IdP data available using getAdditionalUserInfo(result)
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+            });
+    }
+
+    const signInWithFacebook = async () => {
+        const provider = new FacebookAuthProvider();
+        provider.setCustomParameters({
+            'display': 'popup'
+        });
+        await signInWithPopup(auth, provider)
+            .then((result) => {
+
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                if (credential == null) return;
+                const token = credential.accessToken;
+                // The signed-in user info.
+                user.value = result.user;
+                // IdP data available using getAdditionalUserInfo(result)
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+            });
+    }
 
     const login = () => {
         signInWithEmailAndPassword(auth, email.value, password.value)
@@ -28,7 +85,6 @@ const useUsers = () => {
     }
 
     const logout = () => {
-        debugger;
         signOut(auth).then(() => {
             user.value = null;
         }).catch((error) => {
@@ -92,6 +148,8 @@ const useUsers = () => {
         user,
         name,
         surname,
+        signInWithGoogle,
+        signInWithFacebook
     }
 }
 

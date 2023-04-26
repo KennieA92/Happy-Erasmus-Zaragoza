@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full w-full flex justify-center items-center flex-col">
+    <div class="h-full w-10/12 flex justify-center items-center flex-col bg-white">
         <h1 class="text-2xl text-text-color py-2">Register new user</h1>
         <form @submit.prevent="registerUser" class="flex w-full md:w-6/12 flex-col justify-center items-center gap-2">
             <div class="w-10/12 md:w-full grid gap-2 grid-cols-2 text-black">

@@ -1,27 +1,16 @@
 <template>
     <div class="w-full min-h-screen flex flex-wrap justify-center ">
         <LandingComponent />
+        <ScrollingTextComponent />
+        <EntryComponent />
     </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
 import LandingComponent from '../components/LandingComponent.vue';
-/* import useUsers from '../modules/useUsers';
-const isLoading = ref(true);
-onMounted(() => {
-    isUserLoggedIn().then(() => {
-        setTimeout(() => {
-            isLoading.value = false;
+import ScrollingTextComponent from '../components/ScrollingTextComponent.vue';
+import EntryComponent from '../components/EntryComponent.vue';
 
-        }, 3000);
-    });
-
-
-
-}); */
-
-const isRegister = ref(false);
 </script>
 
 <style lang="scss" scoped></style>
