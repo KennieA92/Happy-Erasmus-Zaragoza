@@ -11,7 +11,8 @@
                 </h1>
 
             </div>
-            <router-link to="/"><img class="absolute right-10 md:right-20 w-4 md:w-10 bottom-2 md:bottom-4 animate-bounce"
+            <router-link :to="{ path: '/', hash: '#entry' }"><img
+                    class="absolute right-10 md:right-20 w-4 md:w-10 bottom-2 md:bottom-4 animate-bounce"
                     src="../assets/landing/arrow.svg" alt=""></router-link>
         </div>
 

@@ -1,5 +1,6 @@
 <template>
-    <div class="h-4/6 w-9/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl">
+    <div
+        class="min-h-[70vh] md:min-h-full w-full md:w-11/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl font-sourcecodepro">
         <div class="w-10/12">
             <h1 class="text-xl mb-3">Sign in
             </h1>
@@ -8,12 +9,12 @@
                     here!</a>
             </p>
         </div>
-        <form @submit.prevent="login" class="flex w-full md:w-10/12 flex-col justify-center items-center gap-4">
+        <form @submit.prevent="login" class="flex w-full md:w-10/12 flex-col justify-center items-center py-2  gap-4">
             <input class="w-10/12 md:w-full text-black border-[#DCDBDD]  bg-white rounded-xl" type="text"
                 placeholder="Email" v-model="email" />
             <input class="w-10/12 md:w-full text-black border-[#DCDBDD]  bg-white rounded-xl" type="password"
                 placeholder="Password" v-model="password" />
-            <div class="flex w-full items-center">
+            <div class="flex w-10/12 md:w-full items-center">
                 <router-link class="text-sm w-full" to="/">Forgot Password?</router-link>
                 <input type="submit" value="LOG IN"
                     class="w-full py-2 bg-accent rounded-xl font-semibold text-xl text-white border-black border-[1px] border-solid" />

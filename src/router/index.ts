@@ -22,8 +22,18 @@ const routes: Array<any> = [
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth'
+            };
+        }
+        return { x: 0, y: 0 };  // Go to the top of the page if no hash
+    },
 });
+
 
 const getCurrentUser = () => {
     return new Promise((resolve, reject) => {
@@ -51,5 +61,7 @@ router.beforeEach(async (to, from, next) => {
         next();
     }
 })
+
+
 
 export default router

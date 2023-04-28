@@ -1,25 +1,44 @@
 <template>
-    <div class="h-full w-10/12 flex justify-center items-center flex-col bg-white">
-        <h1 class="text-2xl text-text-color py-2">Register new user</h1>
-        <form @submit.prevent="registerUser" class="flex w-full md:w-6/12 flex-col justify-center items-center gap-2">
-            <div class="w-10/12 md:w-full grid gap-2 grid-cols-2 text-black">
-                <input class=" border-none bg-secondary rounded-xl focus:ring-0 ring-secondary " type="text"
+    <div
+        class="min-h-[70vh] md:min-h-full md:h-10/12 w-full md:w-11/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl font-sourcecodepro">
+        <div class="w-10/12">
+            <h1 class="text-2xl text-text-color py-2">Create an account</h1>
+            <p class="text-xs text-black">Already got an Account? <a class="text-secondary cursor-pointer"
+                    @click="$emit('register')">Login
+                    here!</a>
+            </p>
+        </div>
+        <form @submit.prevent="registerUser"
+            class="flex w-full text-black  md:w-10/12 flex-col justify-center items-center py-2 gap-2">
+            <input class="w-10/12 md:w-full  border-[#DCDBDD]  bg-white rounded-xl focus:ring-0 ring-secondary " type="text"
+                placeholder="EMAIL" v-model="email" />
+            <div class="w-10/12 md:w-full grid gap-2 grid-cols-2 ">
+                <input class="border-[#DCDBDD]  bg-white rounded-xl focus:ring-0 ring-secondary " type="text"
                     placeholder="NAME" v-model="name" />
 
-                <input class="border-none bg-secondary rounded-xl focus:ring-0 ring-secondary " type="text"
+                <input class="border-[#DCDBDD] bg-white rounded-xl focus:ring-0 ring-secondary " type="text"
                     placeholder="SURNAME" v-model="surname" />
             </div>
-            <input class="w-10/12 md:w-full  text-black border-none bg-secondary rounded-xl focus:ring-0 ring-secondary "
-                type="text" placeholder="EMAIL" v-model="email" />
-            <input class="w-10/12 md:w-full  text-black border-none bg-secondary rounded-xl focus:ring-0 ring-secondary "
+
+            <input class="w-10/12 md:w-full border-[#DCDBDD]  bg-white rounded-xl focus:ring-0 ring-secondary "
                 type="password" placeholder="PASSWORD" v-model="password" />
             <input type="submit" value="LOG IN"
-                class="w-40 py-1 bg-primary rounded-xl font-semibold text-xl text-black border-black border-[1px] border-solid" />
-            <p class="text-lg">Already have an account? <span class="text-secondary cursor-pointer"
-                    @click="$emit('register')">Login
-                    here!</span>
-            </p>
+                class="w-10/12 md:w-full py-1 bg-accent rounded-xl font-semibold text-white text-xl border-black border-[1px] border-solid" />
+            <label class="w-10/12  md:w-full text-xs"><input type="checkbox" class="bg-secondary text-primary"> By clicking
+                Create
+                account, I
+                agree that I
+                have
+                read and
+                accepted the <router-link to="/" class="text-secondary">Terms of Use and Privacy
+                    Policy.</router-link></label>
         </form>
+        <div class="w-10/12">
+            <img class="w-full my-4" src="../assets/entry/longline.svg" alt="">
+            <p class="text-xs">Protected by reCAPTCHA and subject to the <a class="text-secondary" href="#">Cuboid Privacy
+                    Policy and Terms of
+                    Service.</a></p>
+        </div>
     </div>
 </template>
   

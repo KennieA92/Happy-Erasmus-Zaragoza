@@ -3,6 +3,8 @@
         <LandingComponent />
         <ScrollingTextComponent />
         <EntryComponent />
+        <InfoComponent />
+        <EventsInfoComponent />
     </div>
 </template>
 
@@ -10,6 +12,8 @@
 import LandingComponent from '../components/LandingComponent.vue';
 import ScrollingTextComponent from '../components/ScrollingTextComponent.vue';
 import EntryComponent from '../components/EntryComponent.vue';
+import InfoComponent from '../components/InfoComponent.vue';
+import EventsInfoComponent from '../components/EventsInfoComponent.vue';
 
 </script>
 

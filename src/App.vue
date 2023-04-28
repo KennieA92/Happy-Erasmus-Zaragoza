@@ -5,10 +5,12 @@
     <Suspense>
       <router-view />
     </Suspense>
+    <FooterComponent />
   </div>
 </template>
 
 <script setup lang="ts">
+import FooterComponent from './components/FooterComponent.vue';
 import NavigationComponent from './components/NavigationComponent.vue';
 
 </script>

@@ -25,41 +25,10 @@ module.exports = {
           }
         },
         slideIn: {
-          '0%': { transform: 'translateX(-1000px)' },
+          '0%': { transform: 'translateX(50%) translateY(-25%) rotate(25deg)', opacity: '0' },
+          '25': { transform: 'translateX(0) translateY(0) rotate(12deg)', opacity: '0' },
+          '50%': { transform: 'translateX(-100%)', opacity: '1' },
           '100%': { transform: 'translateX(0)' },
-        },
-        scrollingTextRight: {
-          '0%': {
-            transform: 'translateX(20%)',
-            opacity: '0',
-          },
-          '10%': {
-            transform: 'translateX(0)',
-            opacity: '1',
-          },
-          '25%': {
-            transform: 'translateX(-25%)',
-          },
-          '40%': {
-            transform: 'translateX(-50%)',
-          },
-          '55%': {
-            transform: 'translateX(-75%)',
-          },
-          '70%': {
-            transform: 'translateX(-100%)',
-          },
-          '85%': {
-            transform: 'translateX(-150%)',
-          },
-          '100%': {
-            transform: 'translateX(-200)',
-            opacity: '0',
-          }
-        },
-        scrollingTextLeft: {
-          '0%, 100%': { transform: 'translateX(200%)' },
-          '50': { transform: 'translateX(0)' },
         },
         translate: {
           '0%, 100%': { transform: 'translateY(50%)' },
@@ -95,6 +64,9 @@ module.exports = {
       fontFamily: {
         'sourcecodepro': ['Source Code Pro', 'monospace'],
       },
+      content: {
+        'rotatedbox': ''
+      }
     },
   },
   plugins: [

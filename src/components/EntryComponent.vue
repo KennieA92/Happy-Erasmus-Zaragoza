@@ -40,9 +40,15 @@
                     </div>
                 </div>
             </div>
-            <div class="w-5/12 h-full flex justify-center items-center">
-                <RegisterComponent v-if="isRegister" />
-                <LoginComponent v-else @register="isRegister = true" />
+            <div class="pt-14 w-full md:w-5/12 h-full flex justify-center items-center  z-[1] relative">
+                <div
+                    class="absolute hidden md:block bg-black md:ml-12 bottom-20 rounded-3xl w-8/12 h-5/6 rotate-12 bg-gradient-to-b from-[#2C6E49] to-primary z-[0]">
+                </div>
+                <div
+                    class="w-full h-full md:w-8/12 md:h-5/6 bg-gradient-to-b from-primary to-secondary rounded-3xl md:pt-8 z-[0]">
+                    <RegisterComponent v-if="isRegister" @register="isRegister = false" class="animate-slide-in" />
+                    <LoginComponent v-else class="animate-slide-in" @register="isRegister = true" />
+                </div>
             </div>
         </div>
     </section>
