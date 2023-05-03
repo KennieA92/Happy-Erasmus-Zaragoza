@@ -72,7 +72,7 @@ const useUsers = () => {
         signInWithEmailAndPassword(auth, email.value, password.value)
             .then((userCredential) => {
                 user.value = userCredential.user;
-                router.push('/events');
+                router.push('/');
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;

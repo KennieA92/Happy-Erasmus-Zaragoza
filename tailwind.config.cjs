@@ -4,6 +4,16 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        burgerTop: {
+          '0%': { transform: 'translateY(0) rotate(0)' },
+          '50%': { transform: 'translateY(0) rotate(0)' },
+          '100%': { transform: 'translateY(7px) rotate(45deg)' },
+        },
+        burgerBottom: {
+          '0%': { transform: 'translateY(0) rotate(0)' },
+          '50%': { transform: 'translateY(0) rotate(0)' },
+          '100%': { transform: 'translateY(-7px) rotate(-45deg)' },
+        },
         slide: {
           '30%': {
             transform: 'translateX(0)',
@@ -40,10 +50,12 @@ module.exports = {
         }
       },
       animation: {
+        'burgerTop': 'burgerTop 0.5s linear 1 forwards',
+        'burgerBottom': 'burgerBottom 0.5s linear 1 forwards',
         'textSlideRight': 'scrollingTextRight 20s linear infinite',
         'textSlideleft': 'scrollingTextLeft 10s linear infinite',
         'slide': 'slide 12s linear infinite',
-        'slow-fade': 'fadeIn 3s ease-in-out 1',
+        'slow-fade': 'fadeIn 1s ease-in-out 1',
         'spin-slow': 'spin 6s linear infinite',
         'slide-in': 'slideIn 2s ease-in-out 1',
       },

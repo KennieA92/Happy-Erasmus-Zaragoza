@@ -17,6 +17,7 @@
             YOUR
             FELLOWS STAY <span class="font-bold">CONNECTED</span> WITH YOUR FELLOWS
 
+
         </h2>
     </section>
 </template>
