@@ -1,8 +1,8 @@
 <template>
     <section id="#info" class="pb-8 h-full w-full flex justify-center">
         <div
-            class="w-10/12 h-full bg-primary flex items-center rounded-t-3xl rounded-l-3xl rounded-s-3xl relative flex-wrap py-10">
-            <div class="px-8 h-3/4 w-full lg:w-10/12 2xl:w-9/12 flex justify-center items-center flex-wrap">
+            class="w-10/12 h-full bg-primary flex items-center justify-center rounded-t-3xl rounded-l-3xl rounded-s-3xl relative flex-wrap py-10">
+            <div class="h-full w-11/12 lg:w-11/12 2xl:w-11/12 flex justify-center items-center flex-wrap">
                 <h1
                     class="w-full text-start text-2xl/snug md:text-5xl/snug lg:text-6xl/snug 2xl:text-7xl/tight font-sourcecodepro text-text-secondary">
                     WE'VE GATHERED YOUR LIFETIME MOMENTS FOR YOU SO YOU DO NOT HAVE TO.

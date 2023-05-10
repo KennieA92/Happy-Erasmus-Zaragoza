@@ -4,6 +4,14 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        tripNavOpen: {
+          '0%': { marginLeft: '-240px' },
+          '100%': { marginLeft: '0' },
+        },
+        tripNavClose: {
+          '0%': { marginLeft: '0' },
+          '100%': { marginLeft: '-240px' },
+        },
         burgerTop: {
           '0%': { transform: 'translateY(0) rotate(0)' },
           '50%': { transform: 'translateY(0) rotate(0)' },
@@ -13,6 +21,16 @@ module.exports = {
           '0%': { transform: 'translateY(0) rotate(0)' },
           '50%': { transform: 'translateY(0) rotate(0)' },
           '100%': { transform: 'translateY(-7px) rotate(-45deg)' },
+        },
+        burgerTopClose: {
+          '0%': { transform: 'translateY(7px) rotate(45deg)' },
+          '50%': { transform: 'translateY(0) rotate(0)' },
+          '100%': { transform: 'translateY(0) rotate(0)' },
+        },
+        burgerBottomClose: {
+          '0%': { transform: 'translateY(-7px) rotate(-45deg)' },
+          '50%': { transform: 'translateY(0) rotate(0)' },
+          '100%': { transform: 'translateY(0) rotate(0)' },
         },
         slide: {
           '30%': {
@@ -48,14 +66,24 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         }
+        ,
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        }
       },
       animation: {
+        'tripNavOpen': 'tripNavOpen 0.5s linear 1 forwards',
+        'tripNavClose': 'tripNavClose 0.5s linear 1 forwards',
         'burgerTop': 'burgerTop 0.5s linear 1 forwards',
         'burgerBottom': 'burgerBottom 0.5s linear 1 forwards',
+        'burgerTopClose': 'burgerTopClose 0.5s linear 1 forwards',
+        'burgerBottomClose': 'burgerBottomClose 0.5s linear 1 forwards',
         'textSlideRight': 'scrollingTextRight 20s linear infinite',
         'textSlideleft': 'scrollingTextLeft 10s linear infinite',
         'slide': 'slide 12s linear infinite',
-        'slow-fade': 'fadeIn 1s ease-in-out 1',
+        'slow-fade': 'fadeIn 0.5s ease-in-out 1',
+        'slow-fadeOut': 'fadeOut 0.5s ease-in-out 1',
         'spin-slow': 'spin 6s linear infinite',
         'slide-in': 'slideIn 2s ease-in-out 1',
       },

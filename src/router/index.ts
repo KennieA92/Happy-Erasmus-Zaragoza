@@ -9,9 +9,30 @@ const routes: Array<any> = [
         component: () => import('../views/HomeView.vue')
     },
     {
-        path: '/events',
-        name: 'Events',
-        component: () => import('../views/EventsView.vue'),
+        path: '/trips',
+        name: 'Trips',
+        component: () => import('../views/TripsView.vue'),
+        meta: {
+            requiresAuth: true
+        }
+    }, {
+        path: '/gallery',
+        name: 'TripGallery',
+        component: () => import('../views/TripGalleryView.vue'),
+        meta: {
+            requiresAuth: true
+        }
+    }, {
+        path: '/about',
+        name: 'About',
+        component: () => import('../views/AboutView.vue'),
+        meta: {
+            requiresAuth: true
+        }
+    }, {
+        path: '/admin',
+        name: 'Admin',
+        component: () => import('../views/AdminView.vue'),
         meta: {
             requiresAuth: true
         }

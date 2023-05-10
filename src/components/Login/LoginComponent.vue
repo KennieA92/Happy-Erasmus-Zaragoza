@@ -21,19 +21,19 @@
             </div>
         </form>
         <div class="w-10/12 mt-6">
-            <div class="w-full flex justify-center overflow-hidden"><img class="w-full " src="../assets/entry/longline.svg"
-                    alt="">
-                <p class="px-4">Or</p><img class="w-full" src="../assets/entry/longline.svg" alt="">
+            <div class="w-full flex justify-center overflow-hidden"><img class="w-full "
+                    src="../../assets/entry/longline.svg" alt="">
+                <p class="px-4">Or</p><img class="w-full" src="../../assets/entry/longline.svg" alt="">
             </div>
         </div>
         <div class="w-10/12 flex justify-between">
             <button @click="signInWithGoogle"
                 class="border-[1px] mx-2 py-2 w-full flex justify-center items-center rounded-xl">
-                <img class="mx-2" src="../assets/entry/google.svg" alt=""> Google
+                <img class="mx-2" src="../../assets/entry/google.svg" alt=""> Google
             </button>
             <button @click="signInWithFacebook"
                 class="border-[1px] mx-2 py-2 w-full flex justify-center items-center rounded-xl">
-                <img class="mx-2" src="../assets/entry/facebook.svg" alt=""> Facebook
+                <img class="mx-2" src="../../assets/entry/facebook.svg" alt=""> Facebook
             </button>
 
         </div>
@@ -42,7 +42,7 @@
 
 <script setup lang="ts">
 
-import useUsers from "../modules/useUsers";
+import useUsers from "../../modules/useUsers";
 const { login, email, password, signInWithGoogle, signInWithFacebook } = useUsers();
 
 </script>

@@ -5,7 +5,7 @@
             <div class="w-10/12 md:w-7/12 flex flex-col items-center justify-center">
                 <div class="w-full md:w-10/12">
                     <div class="flex items-center py-4"><img class="w-14 h-[2px] object-cover"
-                            src="../assets/entry/line.svg" alt="">
+                            src="../../assets/entry/line.svg" alt="">
                         About us.
                     </div>
                     <div class="w-full md:w-1/2 py-4">
@@ -46,8 +46,8 @@
                 </div>
                 <div
                     class="w-full h-full md:w-8/12 md:h-5/6 bg-gradient-to-b from-primary to-secondary rounded-3xl md:pt-8 z-[0]">
-                    <RegisterComponent v-if="isRegister" @register="isRegister = false" class="animate-slide-in" />
-                    <LoginComponent v-else class="animate-slide-in" @register="isRegister = true" />
+                    <RegisterComponent v-if="isRegister" @register="isRegister = false" />
+                    <LoginComponent v-else @register="isRegister = true" />
                 </div>
             </div>
         </div>
@@ -56,9 +56,9 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import RegisterComponent from '../components/RegisterComponent.vue';
-import LoginComponent from '../components/LoginComponent.vue';
-import useUsers from '../modules/useUsers';
+import RegisterComponent from '../../components/Login/RegisterComponent.vue';
+import LoginComponent from '../../components/Login/LoginComponent.vue';
+import useUsers from '../../modules/useUsers';
 const isLoading = ref(true);
 const { isUserLoggedIn } = useUsers();
 

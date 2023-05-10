@@ -73,6 +73,8 @@ const useUsers = () => {
             .then((userCredential) => {
                 user.value = userCredential.user;
                 router.push('/');
+                email.value = '';
+                password.value = '';
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;

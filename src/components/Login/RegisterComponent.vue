@@ -34,7 +34,7 @@
                     Policy.</router-link></label>
         </form>
         <div class="w-10/12">
-            <img class="w-full my-4" src="../assets/entry/longline.svg" alt="">
+            <img class="w-full my-4" src="../../assets/entry/longline.svg" alt="">
             <p class="text-xs">Protected by reCAPTCHA and subject to the <a class="text-secondary" href="#">Cuboid Privacy
                     Policy and Terms of
                     Service.</a></p>
@@ -43,6 +43,6 @@
 </template>
   
 <script setup lang="ts">
-import useUsers from "../modules/useUsers";
+import useUsers from "../../modules/useUsers";
 const { registerUser, name, surname, email, password } = useUsers();
 </script>

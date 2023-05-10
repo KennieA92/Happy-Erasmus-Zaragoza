@@ -8,12 +8,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDQrIt2KVVkizUzA3eBYVV9ZsrSTAX0F1E",
-    authDomain: "happy-erasmus-zaragoza.firebaseapp.com",
-    projectId: "happy-erasmus-zaragoza",
-    storageBucket: "happy-erasmus-zaragoza.appspot.com",
-    messagingSenderId: "824771517666",
-    appId: "1:824771517666:web:ae8a05685cba37f1f552bb"
+    apiKey: "AIzaSyDjNSY05LkJMAHm0htjpg1dWdoMrwUV9FA",
+    authDomain: "happy-zaragoza-erasmus.firebaseapp.com",
+    projectId: "happy-zaragoza-erasmus",
+    storageBucket: "happy-zaragoza-erasmus.appspot.com",
+    messagingSenderId: "970341879614",
+    appId: "1:970341879614:web:0c847ee8c7bd984c34666f"
 };
 
 // Initialize Firebase
