@@ -1,6 +1,6 @@
 <template>
-    <section id="trip-section" class="w-full h-[70vh] ">
-        <div class="h-full flex flex-nowrap overflow-hidden">
+    <section id="trip-section" class="w-full md:h-[70vh] ">
+        <div class="h-full flex flex-col md:flex-row md:flex-nowrap overflow-hidden gap-4 md:gap-0">
             <TripNavigationComponent :changeIndex="selectedIndex" :trips="trips" @isNavOpen="isNavOpen = !isNavOpen"
                 @indexChanged="updateToIndex" />
             <TripContentComponent ref="tripcontent" :trips="trips" @change-index="updateIndex" :isSideNavOpen="isNavOpen"

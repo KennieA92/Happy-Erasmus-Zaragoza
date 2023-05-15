@@ -1,11 +1,11 @@
 <template>
     <div
-        class="min-h-[70vh] md:min-h-full md:h-10/12 w-full md:w-11/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl font-sourcecodepro">
+        class="min-h-[70vh] md:min-h-[50vh] md:h-10/12 w-full md:w-11/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl font-nunito">
         <div class="w-10/12">
-            <h1 class="text-2xl text-text-color py-2">Create an account</h1>
-            <p class="text-xs text-black">Already got an Account? <a class="text-secondary cursor-pointer"
-                    @click="$emit('register')">Login
-                    here!</a>
+            <h1 class="text-2xl text-text-color py-2">CREATE AN ACCOUNT</h1>
+            <p class="text-xs text-black">ALREADY GOT AN ACCOUNT? <a class="text-secondary cursor-pointer"
+                    @click="$emit('register')">LOGIN
+                    HERE!</a>
             </p>
         </div>
         <form @submit.prevent="registerUser"
@@ -22,9 +22,9 @@
 
             <input class="w-10/12 md:w-full border-[#DCDBDD]  bg-white rounded-xl focus:ring-0 ring-secondary "
                 type="password" placeholder="PASSWORD" v-model="password" />
-            <input type="submit" value="LOG IN"
+            <input type="submit" value="SIGN UP"
                 class="w-10/12 md:w-full py-1 bg-accent rounded-xl font-semibold text-white text-xl border-black border-[1px] border-solid" />
-            <label class="w-10/12  md:w-full text-xs"><input type="checkbox" class="bg-secondary text-primary"> By clicking
+            <label class="w-10/12  md:w-full text-xs"><input type="checkbox" class="bg-none text-primary "> By clicking
                 Create
                 account, I
                 agree that I

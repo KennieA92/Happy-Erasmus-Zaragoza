@@ -52,11 +52,17 @@ module.exports = {
             transform: 'translateX(0)'
           }
         },
-        slideIn: {
-          '0%': { transform: 'translateX(50%) translateY(-25%) rotate(25deg)', opacity: '0' },
-          '25': { transform: 'translateX(0) translateY(0) rotate(12deg)', opacity: '0' },
-          '50%': { transform: 'translateX(-100%)', opacity: '1' },
-          '100%': { transform: 'translateX(0)' },
+        slideRight: {
+          '0%': { transform: 'translateX(50%)', opacity: '0' },
+          '25': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideLeft: {
+          '0%': { transform: 'translateX(-50%)', opacity: '0' },
+          '25': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         translate: {
           '0%, 100%': { transform: 'translateY(50%)' },
@@ -70,6 +76,11 @@ module.exports = {
         fadeOut: {
           '0%': { opacity: '1' },
           '100%': { opacity: '0' },
+        }
+        ,
+        bounceRight: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(10px)' },
         }
       },
       animation: {
@@ -85,7 +96,9 @@ module.exports = {
         'slow-fade': 'fadeIn 0.5s ease-in-out 1',
         'slow-fadeOut': 'fadeOut 0.5s ease-in-out 1',
         'spin-slow': 'spin 6s linear infinite',
-        'slide-in': 'slideIn 2s ease-in-out 1',
+        'slideRight': 'slideRight 1s ease-in-out 1',
+        'slideLeft': 'slideLeft 1s ease-in-out 1',
+        'bounceRight': 'bounceRight 1s ease-in-out infinite',
       },
       colors: {
         'primary': '#D68C45',
@@ -96,18 +109,35 @@ module.exports = {
         'accent': '#233D4D',
       },
       backgroundImage: {
-        'background': "url('/src/assets/background.svg')",
+        'background': "url('/src/assets/entry/google.svg')",
         'albarracin': "url('/src/assets/albarracin.svg')",
-        'bardenas': "url('/src/assets/bardenas.svg')",
         'pais_vasco': "url('/src/assets/pais_vasco.svg')",
       },
       fontFamily: {
-        'sourcecodepro': ['Source Code Pro', 'monospace'],
+        'nunito': ['"Nunito"', 'sans-serif'],
       },
       content: {
         'rotatedbox': ''
       }
     },
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+      '3xl': '1990px',
+      // => @media (min-width: 1920px) { ... }
+    }
   },
   plugins: [
     require("@tailwindcss/typography"),

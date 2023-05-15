@@ -1,14 +1,15 @@
 <template>
-    <section id="#newsletter" class="pb-8 w-full flex justify-center">
+    <section id="#newsletter" class="pb-8 w-full h-full flex justify-center">
         <div
-            class="w-10/12 min-h-[70vh] md:min-h-[40vh] bg-secondary flex justify-center items-center rounded-tr-3xl rounded-bl-3xl rounded-br-3xl relative">
-            <div class="h-1/4 w-11/12 lg:w-11/12 2xl:w-11/12 flex flex-wrap">
+            class="w-10/12 h-[35vh]
+             bg-secondary flex justify-center items-center content-center rounded-tr-3xl rounded-bl-3xl rounded-br-3xl relative">
+            <div class=" w-11/12 lg:w-11/12 2xl:w-11/12 flex flex-wrap">
                 <h1
-                    class=" w-full text-start text-2xl/snug md:text-5xl/none lg:text-6xl/none 2xl:text-7xl/none font-sourcecodepro text-text-secondary">
+                    class=" w-full text-start text-2xl/snug md:text-5xl/none lg:text-6xl/none 2xl:text-7xl/none font-nunito text-text-secondary">
                     <span class="font-extrabold">NEVER</span> MISS A <span class="font-extrabold">MOMENT</span>
                 </h1>
                 <h2 class="w-full text-start text-lg/none md:text-4xl/none text-text-secondary">
-                    ...sign up with a few clicks
+                    ...subscribe to our weekly newsletter.
                 </h2>
                 <form
                     action="https://gmail.us14.list-manage.com/subscribe/post?u=e6613a5cf963b9588e538fb6f&amp;id=cafafab6dc&amp;f_id=0003ebe0f0"
@@ -18,7 +19,7 @@
                     <div class="w-full md:w-9/12 flex justify-center items-center">
                         <input
                             class="w-full rounded-3xl bg-secondary border-accent placeholder:text-accent focus:ring-primary focus:border-primary"
-                            type="email" name="EMAIL" id="mce-EMAIL" placeholder="Write your email" />
+                            type="email" name="EMAIL" id="mce-EMAIL" placeholder="WRITE YOUR EMAIL" />
                     </div>
                     <div
                         class="w-full md:w-3/12 flex justify-center items-center  bg-accent text-xs  text-white rounded-3xl">

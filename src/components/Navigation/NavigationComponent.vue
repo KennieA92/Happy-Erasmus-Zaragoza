@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full flex justify-center items-center h-40 bg-quaternary"
+    <div class="w-full flex justify-center items-center  md:h-40 bg-quaternary"
         :class="{ ['h-[100vh] animate-slow-fade']: isOpen }">
-        <nav class="w-10/12 h-full flex md:flex-row md:justify-between items-center font-sourcecodepro relative"
+        <nav class="w-10/12 h-full flex md:flex-row md:justify-between items-center font-nunito relative"
             :class="[isOpen ? 'flex-col justify-center' : 'flex-row']">
-            <router-link class="font-bold text-secondary" to="/"
+            <router-link class="font-bold text-secondary h-20 flex items-center" to="/"
                 :class="{ ['mb-10 text-xl absolute top-[69px] left-0']: isOpen }" @click="isOpen = false">HAPPY ERASMUS
                 ZARAGOZA</router-link>
             <div class="justify-between w-full md:w-6/12 items-center text-center md:flex"
@@ -30,7 +30,7 @@
                     v-if="isLoggedIn" @click="logout(); isOpen = false">Log
                     out</router-link>
             </div>
-            <div class="w-full flex md:hidden justify-end z-50 absolute top-[68px]">
+            <div class="w-full flex md:hidden justify-end z-50 absolute top-[25px] md:top-[68px]">
                 <button id="menu-btn"
                     class="md:hidden focus:outline-none bg-none border-none cursor-pointer w-6 h-6 relative"
                     @click=" openBurgerMenu() ">

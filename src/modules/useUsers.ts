@@ -126,7 +126,6 @@ const useUsers = () => {
             });
     }
 
-
     const isLoggedIn = ref(false);
     const isUserLoggedIn = async () => {
         user.value = auth.currentUser

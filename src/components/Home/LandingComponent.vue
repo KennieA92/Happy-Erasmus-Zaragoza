@@ -1,10 +1,10 @@
 <template>
     <section id="#landing" class="pb-8 w-full flex justify-center">
         <div
-            class="w-10/12 h-[70vh] bg-primary flex justify-center items-center rounded-t-3xl rounded-l-3xl rounded-s-3xl relative">
+            class="w-10/12 h-[80vh] md:h-[70vh] bg-primary flex justify-center items-center rounded-t-3xl rounded-l-3xl rounded-s-3xl relative">
             <div class="h-full w-11/12 lg:w-11/12 2xl:w-11/12 flex justify-start items-center">
                 <h1
-                    class="w-full md:w-8/12 text-start text-4xl/snug md:text-5xl/snug lg:text-6xl/snug 2xl:text-7xl/snug font-sourcecodepro text-text-secondary">
+                    class="w-full md:w-8/12 text-start text-4xl/snug md:text-5xl/snug lg:text-6xl/snug 2xl:text-7xl/snug font-nunito text-text-secondary">
                     WE'VE DEVELOPED THIS
                     <span class="font-thin">PHOTO GALLERY </span> TO <span class="font-extrabold">SHARE,
                         DISCOVER &amp; COLLECT </span>
