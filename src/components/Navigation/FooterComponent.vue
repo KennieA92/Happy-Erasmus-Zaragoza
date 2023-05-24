@@ -1,10 +1,10 @@
 <template>
-    <section id="footer" class="w-full flex justify-center items-center border-t-2 py-10 md:py-0">
+    <section id="footer" class="bg-quaternary w-full flex justify-center items-center border-t-[1px] py-10 md:py-0 ">
         <div class="w-10/12 min-h-[20vh] flex flex-col md:flex-row justify-between items-center ">
             <div class="w-full md:w-1/5 h-full">
-                <h1 class="text-primary text-4xl text-center md:text-left py-8">happy <br> Erasmus <br> zaragoza</h1>
+                <h1 class="text-primary text-4xl text-center md:text-left py-8">HAPPY <br> ERASMUS <br> ZARAGOZA</h1>
             </div>
-            <div class="md:w-4/5 h-full flex flex-col md:flex-row justify-between text-sm opacity-50 gap-4">
+            <div class="md:w-4/5 h-full flex flex-col md:flex-row justify-around text-sm opacity-50 gap-4">
                 <div class="w-full md:w-1/4">
                     <p>Happy Erasmus Zaragoza is a student Association focused on helping new
                         Erasmus students to feel comfy

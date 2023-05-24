@@ -39,3 +39,11 @@
     background-color: #4C956C;
     border-radius: 6px;
   }
+
+  .root{
+    position: relative;
+  }
+
+  .safariSelect {
+    text-align: -webkit-center;
+  }

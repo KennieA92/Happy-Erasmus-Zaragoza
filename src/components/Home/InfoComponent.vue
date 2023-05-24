@@ -1,5 +1,5 @@
 <template>
-    <section id="#info" class="h-full w-full flex justify-center">
+    <section id="#info" class="h-full w-full flex justify-center pb-8 ">
         <div
             class="w-10/12 h-full bg-primary flex items-center justify-center rounded-t-3xl rounded-l-3xl rounded-s-3xl relative flex-wrap py-6">
             <div class="h-full w-11/12 lg:w-11/12 2xl:w-11/12 flex justify-center items-center flex-wrap">

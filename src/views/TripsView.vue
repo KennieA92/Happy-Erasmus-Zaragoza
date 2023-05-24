@@ -1,6 +1,6 @@
 <template>
-    <section id="trip-section" class="w-full md:h-[70vh] ">
-        <div class="h-full flex flex-col md:flex-row md:flex-nowrap overflow-hidden gap-4 md:gap-0">
+    <section id="trip-section" class="w-full md:h-[75vh] pb-8 ">
+        <div class="h-full flex flex-col md:flex-row md:flex-nowrap overflow-hidden gap-4 lg:gap-10 xl:gap-12">
             <TripNavigationComponent :changeIndex="selectedIndex" :trips="trips" @isNavOpen="isNavOpen = !isNavOpen"
                 @indexChanged="updateToIndex" />
             <TripContentComponent ref="tripcontent" :trips="trips" @change-index="updateIndex" :isSideNavOpen="isNavOpen"
@@ -16,7 +16,7 @@ import TripNavigationComponent from '../components/Trips/TripNavigationComponent
 import TripContentComponent from '../components/Trips/TripContentComponent.vue';
 
 
-const { trip, uploadFile, trips, getTripsData, addTrip } = useTrips();
+const { trips, getTripsData } = useTrips();
 const isNavOpen = ref(false);
 const selectedIndex = ref(0);
 const tripcontent = ref();

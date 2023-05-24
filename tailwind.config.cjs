@@ -5,12 +5,12 @@ module.exports = {
     extend: {
       keyframes: {
         tripNavOpen: {
-          '0%': { marginLeft: '-240px' },
+          '0%': { marginLeft: '-10%' },
           '100%': { marginLeft: '0' },
         },
         tripNavClose: {
           '0%': { marginLeft: '0' },
-          '100%': { marginLeft: '-240px' },
+          '100%': { marginLeft: '-10%' },
         },
         burgerTop: {
           '0%': { transform: 'translateY(0) rotate(0)' },

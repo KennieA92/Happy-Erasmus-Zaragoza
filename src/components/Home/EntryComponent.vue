@@ -25,21 +25,24 @@
                         </div>
                     </div>
                     <div
-                        class="w-full md:w-10/12 py-8 bg-white bg-opacity-40 rounded-3xl flex flex-col md:flex-row items-center justify-around text-white">
-                        <div class="w-10/12 md:w-3/12 py-4 md:py-0 relative flex flex-wrap">
-                            <div class="w-6 h-6 absolute top-3 md:-top-1 -left-2 rounded-lg bg-gray-400 z-0"></div>
+                        class="w-full md:w-10/12 py-8 bg-white bg-opacity-20 rounded-3xl flex flex-col md:flex-row items-center justify-around text-white">
+                        <div class="w-10/12 md:w-3/12 py-4 md:py-0 relative flex flex-wrap ">
+                            <div class="w-6 h-6 absolute top-3 md:-top-1 -left-2 rounded-lg bg-primary opacity-40 z-0">
+                            </div>
                             <h2 class="text-center md:text-start text-2xl z-10 font-bold">TRIPS</h2>
                             <p class="pb-2 md:pb-0 md:border-b-0 "> Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. </p>
                         </div>
                         <div class="w-10/12 md:w-3/12 py-4 md:py-0 relative flex flex-wrap">
-                            <div class="w-6 h-6 absolute top-3 md:-top-1 -left-2 rounded-lg bg-gray-400 z-0"></div>
+                            <div class="w-6 h-6 absolute top-3 md:-top-1 -left-2 rounded-lg bg-primary opacity-40 z-0">
+                            </div>
                             <h2 class="text-center md:text-start text-2xl z-10 font-bold">EVENTS</h2>
                             <p class="pb-2 md:pb-0 md:border-b-0 "> Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. </p>
                         </div>
                         <div class="w-10/12 md:w-3/12 py-4 md:py-0 relative flex flex-wrap">
-                            <div class="w-6 h-6 absolute top-3 md:-top-1 -left-2 rounded-lg bg-gray-400 z-0"></div>
+                            <div class="w-6 h-6 absolute top-3 md:-top-1 -left-2 rounded-lg bg-primary opacity-40  z-0">
+                            </div>
                             <h2 class="text-center md:text-start text-2xl z-10 font-bold">OTHER EVENTS</h2>
                             <p class="pb-2 md:pb-0 md:border-b-0 "> Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. </p>
@@ -52,7 +55,7 @@
                     </div>
                     <div
                         class="w-full h-full md:w-8/12 bg-gradient-to-b from-primary to-secondary rounded-3xl p-4 md:pt-8 md:p-0 z-10">
-                        <RegisterComponent v-if="isRegister" @register="isRegister = false" />
+                        <RegisterComponent v-if="isRegister || isLoggedIn" @register="isRegister = false" />
                         <LoginComponent v-else @register="isRegister = true" />
                     </div>
                 </div>
@@ -67,7 +70,7 @@ import RegisterComponent from '../../components/Login/RegisterComponent.vue';
 import LoginComponent from '../../components/Login/LoginComponent.vue';
 import useUsers from '../../modules/useUsers';
 const isLoading = ref(true);
-const { isUserLoggedIn } = useUsers();
+const { isUserLoggedIn, isLoggedIn } = useUsers();
 
 const isRegister = ref(false);
 onMounted(() => {
