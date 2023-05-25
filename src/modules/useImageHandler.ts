@@ -1,5 +1,12 @@
 const useImageHandler = () => {
 
+    /**
+     * Resizes an image to a maximum width or height
+     * @param file 
+     * @param maxWidth 
+     * @param maxHeight 
+     * @returns 
+     */
     function resizeImage(file: File, maxWidth: number, maxHeight: number): Promise<Blob> {
         return new Promise((resolve, reject) => {
             // Create a FileReader to read the file

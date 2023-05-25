@@ -3,9 +3,9 @@
         <LandingComponent />
         <ScrollingTextComponent />
         <EntryComponent />
-        <EventsInfoComponent />
-        <NewsletterComponent />
         <InfoComponent />
+        <NewsletterComponent />
+        <EventsInfoComponent />
     </div>
 </template>
 

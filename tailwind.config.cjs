@@ -54,13 +54,13 @@ module.exports = {
         },
         slideRight: {
           '0%': { transform: 'translateX(50%)', opacity: '0' },
-          '25': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         slideLeft: {
           '0%': { transform: 'translateX(-50%)', opacity: '0' },
-          '25': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },

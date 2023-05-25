@@ -42,7 +42,7 @@
 <script setup lang="ts">
 import useTrips from '../../modules/useTrips';
 
-const { trip, uploadFile, trips, getTripsData, addTrip } = useTrips();
+const { trip, uploadFile, getTripsData, addTrip } = useTrips();
 
 getTripsData();
 

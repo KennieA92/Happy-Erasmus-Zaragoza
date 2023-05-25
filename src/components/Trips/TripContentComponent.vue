@@ -13,7 +13,7 @@
                 </div>
                 <div class="w-full flex items-end">
                     <div class=" w-full flex flex-col md:flex-row flex-nowrap items-center content-around justify-around">
-                        <img :src="trip.tripImage" alt="" class="w-full md:w-6/12 h-4/5 object-contain">
+                        <img :src="trip.tripImage" alt="" class="w-full md:w-5/12 h-4/5 object-contain">
                         <div class="md:w-5/12 flex flex-wrap content-end">
                             <h2 class="text-2xl h-1/12 text-primary font-semibold"> {{ trip.location }}</h2>
                             <p class="w-full h-1/12 text-white opacity-50">From: {{ trip.startDate }} - {{ trip.endDate }}
@@ -53,18 +53,31 @@ const trip = ref('');
 const slideRight = ref(false);
 const tripIndex = ref(0);
 
+/**
+ * Change the trip to the index
+ * @param index 
+ */
 const changeIndex = (index: number) => {
+    // If the index is more than 0, slide right
     if (index > 0) slideRight.value = true;
+    // Else slide left
     else slideRight.value = false;
     tripIndex.value += index;
     emit('changeIndex', tripIndex.value);
     trip.value = trips.value[tripIndex.value];
 }
+/**
+ * Change the trip to the index
+ * @param index 
+ */
 const changeToIndex = (index: number) => {
     tripIndex.value = index;
     trip.value = trips.value[tripIndex.value];
 }
 
+/**
+ * Expose the following to the parent component
+ */
 defineExpose({
     changeToIndex
 });

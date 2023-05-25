@@ -1,11 +1,11 @@
 <template>
     <div
-        class="min-h-[70vh] md:min-h-[50vh] md:h-10/12 w-full md:w-11/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl font-nunito">
+        class="min-h-[70vh] md:min-h-[50vh] mt-8 lg:mt-0 md:h-10/12 w-full lg:w-11/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl font-nunito">
         <div class="w-10/12">
             <h1 class="text-2xl text-text-color py-2">CREATE AN ACCOUNT</h1>
-            <p class="text-xs text-black">ALREADY GOT AN ACCOUNT? <a class="text-secondary cursor-pointer"
+            <p class="text-xs text-black">ALREADY GOT AN ACCOUNT? <span class="text-secondary cursor-pointer"
                     @click="$emit('register')">LOGIN
-                    HERE!</a>
+                    HERE!</span>
             </p>
         </div>
         <form @submit.prevent="registerUser"
@@ -34,7 +34,7 @@
                     Policy.</router-link></label>
         </form>
         <div class="w-10/12">
-            <img class="w-full my-4" src="../../assets/entry/longline.svg" alt="">
+            <img class="w-full h-1 my-4" src="../../assets/entry/longline.svg" alt="">
             <p class="text-xs">Protected by reCAPTCHA and subject to the <a class="text-secondary" href="#">Cuboid Privacy
                     Policy and Terms of
                     Service.</a></p>

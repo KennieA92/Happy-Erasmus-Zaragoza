@@ -1,9 +1,9 @@
 <template>
     <section id="entry" class="py-8 w-full min-h-[85vh] flex justify-center">
         <div
-            class="flex flex-col md:h-full md:flex-row md:items-center md:content-center md:justify-center w-10/12 bg-gradient-to-b md:bg-gradient-to-r from-secondary from-80% to-80% to-primary rounded-r-3xl rounded-b-3xl">
-            <div class=" gap-14 md:gap-0 flex md:flex-row flex-col items-center justify-between content-between ">
-                <div class="gap-14 md:gap-0 w-10/12 h-full md:w-7/12 flex flex-wrap justify-center content-between">
+            class="flex flex-col md:h-full lg:flex-row md:items-center md:content-center md:justify-center w-10/12 bg-gradient-to-b lg:bg-gradient-to-r from-secondary from-80% to-80% to-primary rounded-r-3xl rounded-b-3xl">
+            <div class=" gap-14 md:gap-0 flex lg:flex-row flex-col items-center justify-between content-between ">
+                <div class="gap-14 md:gap-0 w-10/12 h-full lg:w-7/12 flex flex-wrap justify-center content-between">
                     <div class="w-full md:h-2/3 md:w-10/12 py-4">
                         <div class="flex items-center md:py-4 md:pt-0 pt-12"><img class="w-14 h-[2px] object-cover"
                                 src="../../assets/entry/line.svg" alt="">
@@ -49,12 +49,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-5/12 h-full flex justify-center items-center  z-[1] relative">
+                <div class="w-full lg:w-5/12 h-full flex justify-center items-center  z-[1] relative">
                     <div
-                        class="absolute hidden md:block bg-black md:ml-14 bottom-40 rounded-3xl w-8/12 h-[76%] rotate-6 bg-gradient-to-b from-[#2C6E49] to-primary z-0">
+                        class="absolute hidden lg:block bg-black md:ml-14 bottom-40 rounded-3xl w-8/12 h-[76%] rotate-6 bg-gradient-to-b from-[#2C6E49] to-primary z-0">
                     </div>
                     <div
-                        class="w-full h-full md:w-8/12 bg-gradient-to-b from-primary to-secondary rounded-3xl p-4 md:pt-8 md:p-0 z-10">
+                        class="w-full h-full lg:w-8/12 bg-gradient-to-b from-primary to-secondary rounded-3xl p-4 lg:pt-8 md:p-0 z-10">
                         <RegisterComponent v-if="isRegister || isLoggedIn" @register="isRegister = false" />
                         <LoginComponent v-else @register="isRegister = true" />
                     </div>
@@ -74,7 +74,9 @@ const { isUserLoggedIn, isLoggedIn } = useUsers();
 
 const isRegister = ref(false);
 onMounted(() => {
+    // Check if user is logged in
     isUserLoggedIn().then(() => {
+        // originally it was working to manage our loading screen. Left it here in case we need it
         setTimeout(() => {
             isLoading.value = false;
 

@@ -55,7 +55,10 @@ const router = createRouter({
     },
 });
 
-
+/**
+ * Returns a promise that resolves to the current user or null if no user is logged in.
+ * @returns Promise that resolves to the current user or null if no user is logged in.
+ */
 const getCurrentUser = () => {
     return new Promise((resolve, reject) => {
         const removeEventListener = onAuthStateChanged(
@@ -68,6 +71,9 @@ const getCurrentUser = () => {
         )
     });
 }
+/**
+ * Checks whether the user is logged in or not and whether the targeted route requires authentication.
+ */
 router.beforeEach(async (to, from, next) => {
     const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
     if (requiresAuth) {

@@ -18,7 +18,7 @@
         <section class="h-full w-full flex justify-center relative">
             <div class="w-full md:w-11/12 h-full rounded-r-3xl rounded-bl-3xl flex flex-col-reverse md:flex-row flex-wrap justify-around md:justify-center content-around
                  ">
-                <div class="w-full md:w-10/12 h-1/12 flex justify-center fixed bottom-16 md:static "><label
+                <div class="w-full md:w-10/12 h-1/12 flex justify-center fixed bottom-16 md:static z-10 md:z-0"><label
                         for="fileUploader"
                         class="w-32 h-12 bg-accent flex justify-center items-center text-white gap-2 rounded-full relative"><input
                             id="fileUploader" class="opacity-0 absolute w-full h-full rounded-full" @change="uploadFile"
@@ -63,19 +63,19 @@ import useTripGallery from '../modules/useTripGallery';
 const { trip, trips, getTripsData } = useTrips();
 const { tripImage, tripImages, getTripImagesData, uploadFile, snackbar } = useTripGallery();
 const route = useRoute();
-const isNavOpen = ref(false);
 const index = parseInt((route.params.tripIndex as string) ?? "0");
 const changeIndex = ref(index);
 const selectedImage = ref("");
-const imgShown = ref(true);
 
+/**
+ * Sets current image to be displayed in the teleport.
+ * @param tripImg 
+ */
 const setImage = (tripImg: string) => {
     selectedImage.value = tripImg;
 }
 
 onMounted(() => {
-
-
     getTripsData();
     setTimeout(() => {
         trip.value = trips.value[index];
@@ -84,6 +84,10 @@ onMounted(() => {
     }, 1000);
 })
 
+/**
+ * Updates the index of the trip to be displayed.
+ * @param index 
+ */
 const updateIndex = (index: number) => {
     changeIndex.value = index;
     trip.value = trips.value[index];

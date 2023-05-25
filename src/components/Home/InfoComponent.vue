@@ -14,9 +14,9 @@
 
 
             <div class="h-1/4 w-11/12 flex justify-end">
-                <router-link :to="{ path: '/trips' }"
-                    class="flex items-center justify-between px-4 animate-bounceRight"><img
-                        class="-rotate-90 w-4 md:w-10 mr-4 " src="../../assets/landing/arrow.svg" alt=""></router-link>
+                <router-link :to="{ path: '/trips' }" class="flex items-center justify-between px-4 animate-bounceRight"
+                    aria-label="go-to-trips"><img class="-rotate-90 w-4 h-4 md:h-10 md:w-10 mr-4 "
+                        src="../../assets/landing/arrow.svg" alt=""></router-link>
             </div>
         </div>
 

@@ -9,8 +9,9 @@ const useTripGallery = () => {
     const tripImages = ref([] as TripImage[]);
     const tripImagesDataRef = collection(db, "tripImages");
     const snackbar = ref({ show: false, text: '' });
-
-
+    /** 
+     * Gets trip images data from firebase
+    */
     const getTripImagesData = (tripId: string) => {
         const q = query(tripImagesDataRef, where("tripId", "==", tripId));
         onSnapshot(q, (snapshot) => {
@@ -23,6 +24,11 @@ const useTripGallery = () => {
         })
     }
 
+    /**
+     * Add trip image to firebase
+     * @param imageUrl 
+     * @returns 
+     */
     const addTripImage = async (imageUrl: string) => {
         if (!auth.currentUser) return alert('Please login to create a trip');
         console.log(tripImage.value)
@@ -35,10 +41,17 @@ const useTripGallery = () => {
         })
     }
 
+    /**
+     * delete trip image from firebase
+     * @param id 
+     */
     const deleteTripImage = async (id: string) => {
         await deleteDoc(doc(tripImagesDataRef, id));
     }
 
+    /** 
+     * Edits trip image data
+    */
     const editTripImage = async (trip: TripImage) => {
         await updateDoc(doc(tripImagesDataRef, tripImage.value.id), {
             title: tripImage.value.tripId,
@@ -48,20 +61,25 @@ const useTripGallery = () => {
         });
     };
 
-
+    /**
+     * Checks if user is authenticated and uploads files to firebase storage
+     * @param e 
+     * @returns 
+     */
     const uploadFile = async (e: Event) => {
         if (auth.currentUser) {
             const target = e.target as HTMLInputElement;
             const files = target.files;
-
+            //If files are not selected, return
             if (!files || !files[0])
                 return;
-
+            // Go through each file
             Array.from(files).forEach(async (file: File) => {
 
                 const maxWidth = 800;
                 const maxHeight = 600;
 
+                //Check if file is too large or not supported
                 try {
                     const resizedBlob = await resizeImage(file, maxWidth, maxHeight);
 
@@ -79,12 +97,14 @@ const useTripGallery = () => {
                              throw new Error('File type not supported')
                          } */
                     } catch (error) {
+                        // Show error if file is too large or not supported, by setting snackbar text and show to true
                         setTimeout(() => {
                             snackbar.value.show = false
                         }, 10000);
                         return;
                     }
 
+                    // Provide feedback on the upload progress
                     uploadTask.on('state_changed',
                         (snapshot) => {
                             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;

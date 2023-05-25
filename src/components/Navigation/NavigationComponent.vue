@@ -8,9 +8,12 @@
                 ZARAGOZA</router-link>
             <div class="justify-between w-full md:w-10/12 xl:w-6/12 items-center text-center md:flex font-semibold"
                 :class="[isOpen ? 'flex flex-wrap' : 'hidden']">
-                <router-link class="p-4 w-full md:w-2/12 " to="/about" @click="isOpen = false">ABOUT</router-link>
-                <router-link class="p-4 w-full md:w-2/12 " to="/trips" @click="isOpen = false">TRIPS</router-link>
-                <router-link class="p-4 w-full md:w-2/12 " to="/about" @click="isOpen = false">CONTACT</router-link>
+                <router-link class="p-4 w-full md:w-2/12 " :to="{ path: '/', hash: '#entry' }"
+                    @click="isOpen = false">ABOUT</router-link>
+                <router-link class="p-4 w-full md:w-2/12 " to="/trips" @click="isOpen = false"
+                    v-if="isLoggedIn">TRIPS</router-link>
+                <router-link class="p-4 w-full md:w-2/12 " :to="{ path: '/', hash: '#footer' }"
+                    @click="isOpen = false">CONTACT</router-link>
                 <select
                     class="appearance-none border-none bg-none bg-quaternary p-4 md:p-0 w-full md:w-2/12 text-center focus:ring-0 safariSelect"
                     id="languages" name="languages">
@@ -30,7 +33,7 @@
                     v-if="isLoggedIn" @click="logout(); isOpen = false">LOG OUT</router-link>
             </div>
             <div class="w-full flex md:hidden justify-end z-40 absolute top-[25px] md:top-[68px]">
-                <button id="menu-btn"
+                <button id="menu-btn" aria-label="menu"
                     class="md:hidden focus:outline-none bg-none border-none cursor-pointer w-6 h-6 relative"
                     @click=" openBurgerMenu() ">
                     <span id="hamburger-top" class="w-6 h-[2px] bg-accent absolute top-[7px] left-0"

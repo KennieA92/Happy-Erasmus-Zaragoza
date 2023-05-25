@@ -26,9 +26,6 @@ const props = defineProps(["trips", "changeIndex"]);
 const trips = toRef(props, "trips");
 const changeIndex = toRef(props, "changeIndex");
 
-
-
-
 </script>
 
 <style scoped></style>

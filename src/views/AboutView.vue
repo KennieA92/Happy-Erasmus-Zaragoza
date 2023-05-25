@@ -1,8 +1,8 @@
 <template>
     <div>
 
-        <div class="flex flex-wrap place-items-center h-screen">
-            <!-- card -->
+        <!--        <div class="flex flex-wrap place-items-center h-screen">
+          
             <div class="shadow-lg rounded-xl w-72 md:w-96 p-4 bg-white relative overflow-hidden">
                 <a href="#" class="w-full h-full block">
                     <div class="flex items-center border-b-2 mb-2 py-2">
@@ -44,7 +44,7 @@
                 </a>
             </div>
         </div>
-
+ -->
     </div>
 </template>
 

@@ -15,16 +15,24 @@ import useTrips from '../modules/useTrips';
 import TripNavigationComponent from '../components/Trips/TripNavigationComponent.vue';
 import TripContentComponent from '../components/Trips/TripContentComponent.vue';
 
-
 const { trips, getTripsData } = useTrips();
 const isNavOpen = ref(false);
 const selectedIndex = ref(0);
 const tripcontent = ref();
 
+/**
+ * Updates the index of the selected trip
+ * @param index 
+ */
 const updateIndex = (index: number) => {
     selectedIndex.value = index;
 }
 
+/**
+ * Updates the index of the selected trip
+ * Triggers the exposed method of tripcontent
+ * @param index 
+ */
 const updateToIndex = (index: number) => {
     selectedIndex.value = index;
     tripcontent.value.changeToIndex(index);

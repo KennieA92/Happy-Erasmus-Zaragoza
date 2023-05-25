@@ -1,12 +1,12 @@
 <template>
     <div
-        class="min-h-[70vh] md:min-h-[50vh] w-full md:w-11/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl font-nunito">
+        class="min-h-[70vh] md:min-h-[50vh] mt-8 lg:mt-0 w-full lg:w-11/12 flex justify-center items-center flex-col bg-tertiary rounded-3xl font-nunito">
         <div class="w-10/12">
             <h1 class="text-2xl mb-3">SIGN IN
             </h1>
-            <p class="text-xs text-black">CREATE AN ACCOUNT <a class="text-secondary cursor-pointer"
+            <p class="text-xs text-black">CREATE AN ACCOUNT <span class="text-secondary cursor-pointer"
                     @click="$emit('register')">REGISTER
-                    HERE!</a>
+                    HERE!</span>
             </p>
         </div>
         <form @submit.prevent="login" class="flex w-full md:w-10/12 flex-col justify-center items-center py-2  gap-4">
@@ -21,24 +21,24 @@
             </div>
         </form>
         <div class="w-10/12 mt-6">
-            <div class="w-full flex justify-center overflow-hidden"><img class="w-full "
+            <div class="w-full flex justify-center items-center overflow-hidden"><img class="w-full h-1"
                     src="../../assets/entry/longline.svg" alt="">
-                <p class="px-4">Or</p><img class="w-full" src="../../assets/entry/longline.svg" alt="">
+                <p class="px-4">Or</p><img class="w-full h-1" src="../../assets/entry/longline.svg" alt="">
             </div>
         </div>
         <div class="w-full md:w-10/12 flex justify-between">
             <button @click="signInWithGoogle"
                 class="border-[1px] mx-2 py-2 w-full flex justify-center items-center rounded-xl">
-                <img class="mx-2" src="../../assets/entry/google.svg" alt=""> Google
+                <img class="mx-2 h-4 w-4" src="../../assets/entry/google.svg" alt=""> Google
             </button>
             <button @click="signInWithFacebook"
                 class="border-[1px] mx-2 py-2 w-full flex justify-center items-center rounded-xl">
-                <img class="mx-2" src="../../assets/entry/facebook.svg" alt=""> Facebook
+                <img class="mx-2 h-4 w-4" src="../../assets/entry/facebook.svg" alt=""> Facebook
             </button>
 
         </div>
         <div class="w-10/12">
-            <img class="w-full my-4" src="../../assets/entry/longline.svg" alt="">
+            <img class="w-full h-1 my-4" src="../../assets/entry/longline.svg" alt="">
             <p class="text-xs">Protected by reCAPTCHA and subject to the <a class="text-secondary" href="#">Cuboid Privacy
                     Policy and Terms of
                     Service.</a></p>
